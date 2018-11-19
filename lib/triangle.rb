@@ -8,6 +8,7 @@ class Triangle
   end
   
   def kind
+<<<<<<< HEAD
     raise TriangleError if illegal
     return :equilateral if equilateral
     return :isosceles if isosceles
@@ -16,12 +17,18 @@ class Triangle
   
   
   
+=======
+    return :equilateral if equilateral
+  end
+  
+>>>>>>> a80b771e11583a0e5f4c10cbd00b263352d462f7
   class TriangleError < StandardError
   end
   
   private
   
   def equilateral
+<<<<<<< HEAD
     @triangle.uniq.length == 1 && @triangle.uniq.first > 0
   end
   
@@ -47,5 +54,8 @@ class Triangle
   def illegal
     return true if @triangle.any? { |side| side <= 0 }
     return true if triangle_inequality?
+=======
+    @triangle.uniq.length == 1
+>>>>>>> a80b771e11583a0e5f4c10cbd00b263352d462f7
   end
 end
